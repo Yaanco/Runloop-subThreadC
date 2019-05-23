@@ -21,10 +21,6 @@
     [self.thread run];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"%s",__func__);
-}
 
 // 停止子线程
 - (IBAction)stop {
