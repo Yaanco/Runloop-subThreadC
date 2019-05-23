@@ -21,6 +21,7 @@
     [self.thread run];
 }
 
+
 // 停止子线程
 - (IBAction)stop {
     [self.thread stop];
