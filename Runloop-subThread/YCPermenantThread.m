@@ -30,7 +30,9 @@
 {
     self = [super init];
     if (self) {
-        self.thread = [[YCThread alloc] initWithBlock:^{            
+        self.thread = [[YCThread alloc] initWithBlock:^{
+            NSLog(@"begin ---");
+            // 创建上下文（要初始化一下结构体）
             CFRunLoopSourceContext context = {0};
             CFRunLoopSourceRef source = CFRunLoopSourceCreate(kCFAllocatorDefault, 0, &context);
             CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
